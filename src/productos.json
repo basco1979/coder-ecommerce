@@ -1,0 +1,164 @@
+[
+  {
+    "title": "producto prueba1",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "code": "abc1",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "thumbnail": [],
+    "id": 1
+  },
+  {
+    "title": "producto prueba2",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc2",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 2
+  },
+  {
+    "title": "producto prueba3",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc3",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 3
+  },
+  {
+    "title": "producto prueba4",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc4",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 4
+  },
+  {
+    "title": "producto prueba5",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc5",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 5
+  },
+  {
+    "title": "producto prueba6",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc6",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 6
+  },
+  {
+    "title": "producto prueba7",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc7",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 7
+  },
+  {
+    "title": "producto prueba8",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc8",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 8
+  },
+  {
+    "title": "producto prueba9",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc9",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 9
+  },
+  {
+    "title": "producto prueba10",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin Imagen",
+    "code": "abc10",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 10
+  },
+  {
+    "title": "Prueba Html",
+    "description": "Probando el form",
+    "price": "1",
+    "thumbnail": [],
+    "code": "123456789",
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "id": 11
+  },
+  {
+    "title": "Probando",
+    "description": "Prueba",
+    "code": "ABC123",
+    "price": 1200,
+    "status": true,
+    "stock": 15,
+    "category": "category",
+    "thumbnail": [],
+    "id": 12
+  },
+  {
+    "title": "Websockets",
+    "description": "Prueba Websockets",
+    "price": 1,
+    "code": "AA",
+    "stock": 1,
+    "status": "true",
+    "category": "cat",
+    "id": 13
+  },
+  {
+    "title": "Segunda Prueba",
+    "description": "AAa",
+    "price": 1000,
+    "code": "AAA123",
+    "stock": 1,
+    "status": "true",
+    "category": "CAT",
+    "id": 14
+  },
+  {
+    "title": "AFA",
+    "description": "NO",
+    "price": 1,
+    "code": "WBS1",
+    "stock": 1,
+    "status": "true",
+    "category": "CAT",
+    "id": 15
+  }
+]

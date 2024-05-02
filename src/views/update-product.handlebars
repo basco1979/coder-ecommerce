@@ -1,0 +1,32 @@
+<h1>Update product</h1>
+<form method="POST" action="/api/products/{{_id}}?_method=PUT">
+  <label for="">Title</label>
+  <input type="text" name="title" value="{{title}}" />
+  <br />
+  <br />
+  <label for="">Description</label>
+  <input type="text" name="description" value="{{description}}" />
+  <br />
+  <br />
+  <label for="">Code</label>
+  <input type="text" name="code" value="{{code}}" />
+  <br />
+  <br />
+  <label for="">Price</label>
+  <input type="number" name="price" value="{{price}}" />
+  <br />
+  <br />
+  <label for="">Status</label>
+  <input type="boolean" name="status" value="{{status}}" />
+  <br />
+  <br />
+  <label for="">Stock</label>
+  <input type="number" name="stock" value="{{stock}}" />
+  <br />
+  <br />
+  <label for="">Category</label>
+  <input type="string" name="category" value="{{category}}" />
+  <br />
+  <br />
+  <button type="submit">Update product</button>
+</form>

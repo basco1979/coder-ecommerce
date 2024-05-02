@@ -1,0 +1,35 @@
+<h1>Admin</h1>
+<button><a href="/view-users">Go to Users List</a></button>
+</br></br>
+<button><a href="/create-product">Create Product</a></button>
+</br>
+<div>
+  <table>
+    <tr>
+      <td> Title </td>
+      <td> Price </td>
+      <td> Code </td>
+      <td> Stock</td>
+      <td> Category</td>
+      <td colspan="2">Actions</td>
+    </tr>
+    {{#each this}}
+      <tr class="product">
+        <td class="title">{{title}} </td>
+        <td> $ {{price}} </td>
+        <td> {{code}} </td>
+        <td> {{stock}} </td>
+        <td> {{category}} </td>
+        <td>
+          <button><a href="/update-product/{{_id}}">
+              Update Product
+            </a></button>
+          <form method="POST" action="/api/products/{{_id}}?_method=DELETE">
+            <button>
+              Delete Product
+            </button></form>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</div>

@@ -1,0 +1,37 @@
+   li.product {
+    background-color: lightskyblue;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 20px;
+   }
+
+   li {
+       list-style:none;
+   }
+
+   li.navlist {
+       display:inline-block;
+       margin-left:200px;
+   }
+
+ 
+#btn{
+    margin-top:20px;
+   margin-left:100px;
+}
+
+    table {
+        border: 3px solid black;
+        height: 100px;
+        margin: 0px auto;
+        width: 400px;
+        margin-top:100px;
+    }
+
+    td {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+
+

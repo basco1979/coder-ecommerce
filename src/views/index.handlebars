@@ -1,0 +1,16 @@
+<div>
+  <h1>Hi!</h1>
+
+  <h2>Welcome {{first_name}} {{last_name}}</h2>
+
+  <button type="button"><a href="/products">Go to Product´s list</a></button>
+  <br />
+  <br />
+  {{#if (isAdmin role)}}<button type="button"><a href="/api/session/admin">Go to
+        Product´s Admin Page</a></button>{{/if}}
+  <br />
+  <br />
+  <button id="logoutBtn" type="button">Log Out</button>
+
+</div>
+<script src="js/logout.js"></script>

@@ -1,0 +1,38 @@
+<h1 style='text-align: center;'>Cart Detail</h1>
+<div>
+  <table>
+    <tr>
+      <td> Title </td>
+      <td> Quantity </td>
+      <td> Price </td>
+      <td> Modify Quantity</td>
+      <td> Remove product</td>
+    </tr>
+    {{#each cart.products}}
+      <tr class='product'>
+        <td class='title'>{{this.product.title}} </td>
+        <td> {{this.quantity}} </td>
+        <td> $ {{this.product.price}} </td>
+        <td style="text-align: center;">
+          <a href="/{{../cart._id}}/addQuantity/{{this.product._id}}" style="text-decoration: none;" > + </a>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <a href="/{{../cart._id}}/removeQuantity/{{this.product._id}}" style="text-decoration: none;"> - </a></td>
+        <td><a href="/{{../cart._id}}/delete/{{this.product._id}}??_method=DELETE">X</a></td>
+      </tr>
+    {{/each}}
+  </table>
+  <div>
+    <span>
+        <h3 style="text-align: center;">Cart Total : $ {{total}}</h3>
+    </span>
+  </div>
+  <div style="display: flex; justify-content:center">
+    <button><a href="/cart/{{cart.id}}/checkout">
+      Checkout
+    </a></button>
+  <form method='POST' action='/api/carts/{{cart._id}}?_method=DELETE'>
+    <button>
+      Empty Cart
+    </button></form>
+<button><a href='/products'>Back</a></button>
+</div></div>

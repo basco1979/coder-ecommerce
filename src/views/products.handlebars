@@ -1,0 +1,52 @@
+<div>
+     <div>
+    <h2>Welcome {{first_name}} {{last_name}} - Rol: "{{role}}"</h2>
+
+    <br />
+    <button id='logoutBtn' type='button'>Log Out</button>
+
+  </div>
+  <script src="js/logout.js"></script>
+    <div  style="text-align: center;">
+        <h1>Products</h1>
+    <button><a href="/cart/{{cartId}}/">Go to Cart</a></button>
+    </div>
+    <table>
+    <tr>
+        <td> Title </td>
+        <td> Price </td>
+        <td> Code </td>
+        <td> Stock</td>
+        <td> Category</td>
+        <td>  Cart </td>
+        {{#if (isAdmin role)}}<td>Actions</td>{{/if}}
+    </tr>
+    {{#each products.docs}}
+    {{#if this.status}}
+    <tr class="product">
+        <td class="title">{{this.title}} </td>
+        <td>  $ {{this.price}}   </td>
+        <td>  {{this.code}}   </td>
+        <td> {{this.stock}} </td>
+        <td> {{this.category}} </td>
+        <td> <button><a href="/{{../cartId}}/add/{{this._id}}"> Add To Cart </a></button> </td>
+    </tr>
+    {{else}}
+        <tr class="product">
+            <td class="title">{{this.title}} </td>
+            <td>$ {{this.price}}  </td>
+            <td>  {{this.stock}} </td>
+            <td colspan="4">This product is out of inventory </td>
+        </tr>
+    {{/if}}
+{{/each}}
+</table>
+</div>
+<div style="text-align: center; margin-top:10px">
+    {{#if products.hasPrevPage}}
+    <button><a href="{{products.prevLink}}"> Pagina Previa</a></button>
+    {{/if}}
+    {{#if products.hasNextPage}}
+    <button><a href="{{products.nextLink}}"> Pagina Siguiente</a></button>
+    {{/if}}
+</div>
