@@ -48,7 +48,6 @@ viewsRouter.get("/cart/:cid/checkout", applyPolicies(['USER', 'PREMIUM']), getCh
 viewsRouter.get("/cart/:cid/payment/:tid", applyPolicies(['USER', 'PREMIUM']), getPaymentPage);
 
 
-
 viewsRouter.get(
   "/restore-password",
   restorePassword

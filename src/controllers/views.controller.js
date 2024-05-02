@@ -2,6 +2,9 @@ import { productModel } from "../dao/models/product.model.js";
 import dotenv from 'dotenv'
 import jwt from 'jsonwebtoken'
 import { cartsService, ticketsService, usersService } from "../dao/repositories/index.js";
+import stripe from 'stripe'
+const stripeInstance = stripe(process.env.STRIPE);
+
 
 dotenv.config()
 
@@ -71,7 +74,7 @@ export const getPaymentPage = async(req, res) => {
   const tid = req.params.tid
   const ticket = await ticketsService.getTicketById(tid)
   const user = req.user
-  res.render('payment', {ticket, user})
+  res.render('payment', {ticket, user, stripePublishableKey: process.env.STRIPE_PUBLIC })
 }
 
 export const restorePassword = (req, res) => {
