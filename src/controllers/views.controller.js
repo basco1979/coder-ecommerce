@@ -73,8 +73,9 @@ export const getCheckoutPage = async(req, res) => {
 export const getPaymentPage = async(req, res) => {
   const tid = req.params.tid
   const ticket = await ticketsService.getTicketById(tid)
+  const amount = Math.round(parseFloat(ticket.amount)*100)
   const user = req.user
-  res.render('payment', {ticket, user, stripePublishableKey: process.env.STRIPE_PUBLIC })
+  res.render('payment', {ticket, amount, user, stripePublishableKey: process.env.STRIPE_PUBLIC })
 }
 
 export const restorePassword = (req, res) => {

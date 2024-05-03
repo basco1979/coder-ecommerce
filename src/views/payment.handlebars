@@ -16,7 +16,7 @@
 <form action="/api/payments/{{ticket.id}}" method="POST">
 <script 
             src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ stripePublishableKey }}"
-            data-amount={{ticket.amount}}
+            data-amount={{amount}}
             data-currency='USD'
             data-name='TICKET'
             data-description="Use '4242 4242 4242 4242' for card #"
