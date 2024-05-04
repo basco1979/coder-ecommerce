@@ -1,0 +1,106 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container {
+  width: 40%;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button {
+  height: 60px;
+  width: 30%;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #f70b0b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.login-button:hover {
+  background-color: #f34c09;
+}
+.login-button:active {
+  background-color: #703701;
+}
+
+.login-github-button {
+  height: 60px;
+  width: 30%;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #f7890b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.login-github-button:hover {
+  background-color: #f8af4f;
+}
+.login-github-button:active {
+  background-color: #fcb370;
+}
+
+.forgot-button {
+  height: 60px;
+  width: 30%;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #98e8fc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.forgot-button:hover {
+  background-color: #7dc2c7;
+}
+.forgot-button:active {
+  background-color: #037a8f;
+}
+
+.register-container {
+    text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.register-button {
+  height: 60px;
+  width: 50%;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #ff4e4e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.register-button:hover {
+  background-color: #8f1835;
+}
+.register-button:active {
+  background-color: #660106;
+}

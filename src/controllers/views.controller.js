@@ -36,6 +36,8 @@ export const getChatPage = async (req, res) => {
 
 export const getProductsPage = async (req, res) => {
   const { first_name, last_name, role, cartId } = req.session.user
+  const cart = await cartsService.getCartById(cartId)
+  const cart_quantity = cart.products.length
   let { page } = req.query
   if (!page || isNaN(Number(page))) page = 1
   const products = await productModel.paginate({}, { limit: 10, page: page })
@@ -47,7 +49,8 @@ export const getProductsPage = async (req, res) => {
     role,
     cartId,
     products,
-    cartId,
+    cart,
+    cart_quantity,
     title: 'Products',
     style: 'products.css',
   })
@@ -60,7 +63,7 @@ export const addProductInCart = async (req, res) => {
     const user = await userModel.findOne({ cartId: cid })
     if (prod.owner !== user.email) {
       const result = await cartsService.addProductToCart(cid, pid)
-      return
+      res.redirect('/products')
     } else {
       return res
         .status(403)
@@ -121,6 +124,7 @@ export const getCartDetailPage = async (req, res) => {
 export const getCheckoutPage = async (req, res) => {
   const cid = req.params.cid
   const ticket = await cartsService.purchaseCart(cid)
+  ticket.amount = ticket.amount.toFixed(2)
   const cart = await cartsService.getCartById(cid)
 
   res.render('checkout', {

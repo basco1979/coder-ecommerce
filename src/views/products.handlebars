@@ -5,6 +5,9 @@
     <div class="products">
         <h1>Products</h1>
     <button class="goCart"><a href="/cart/{{cartId}}/"><img src="/img/Shopping-Cart.png" class="cart-icon"></a></button>
+    {{#if cart_quantity}}
+    <span class="cart_quantity">{{cart_quantity}}</span>
+    {{/if}}
     </div>
 <div class="product-list">
      {{#each products.docs}}

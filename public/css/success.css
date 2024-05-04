@@ -1,0 +1,21 @@
+h3{
+    text-align: center;
+}
+
+.goBack {
+  height: 60px;
+  width: 100px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #f70b0b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.goBack:hover {
+  background-color: #f34c09;
+}
+.goBack:active {
+  background-color: #703701;
+}

@@ -20,5 +20,5 @@ export const paymentIntent = async (req, res) => {
         customer: customer.id,
       })
     )
-    .then((charge) => res.render('success'))
+    .then((charge) => res.render('success', {title: "Success", style: 'success.css'}))
 }
