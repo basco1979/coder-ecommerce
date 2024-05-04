@@ -29,9 +29,8 @@
     <button class="checkout"><a href="/cart/{{cart.id}}/checkout">
       Checkout
     </a></button>
-  <form method='POST' action='/api/carts/{{cart._id}}?_method=DELETE'>
-    <button class="empty-cart">
+    <button class="empty-cart"><a href="/{{cart.id}}/delete">
       Empty Cart
-    </button></form>
+    </button></a>
 <button class="goBack"><a href='/products'>Back</a></button>
 </div>

@@ -54,20 +54,50 @@ export const getProductsPage = async (req, res) => {
 }
 
 export const addProductInCart = async (req, res) => {
-const { pid, cid } = req.params;
+  const { pid, cid } = req.params
   try {
-   const prod = await productModel.findOne({ _id: pid })
+    const prod = await productModel.findOne({ _id: pid })
     const user = await userModel.findOne({ cartId: cid })
     if (prod.owner !== user.email) {
-    const result = await cartsService.addProductToCart(cid, pid)
-    return
+      const result = await cartsService.addProductToCart(cid, pid)
+      return
     } else {
-     return res.status(403).json({message:"You can't put your own products in the shopping cart"})
+      return res
+        .status(403)
+        .json({
+          message: "You can't put your own products in the shopping cart",
+        })
     }
   } catch (err) {
-    req.logger.error(`${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()} - Error to add product`)
+    req.logger.error(
+      `${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()} - Error to add product`
+    )
   }
 }
+
+export const deleteProductInCart = async (req, res) => {
+  const { cid, pid } = req.params
+  try {
+    const result = await cartsService.deleteProductInCart(cid, pid)
+    res.redirect(`/cart/${cid}/`)
+  } catch (err) {
+    req.logger.error(
+      `${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()} - Error to delete product`
+    )
+  }
+}
+
+//Empty cart
+export const deleteCart = async (req, res) => {
+  const { cid } = req.params
+  try {
+    const cart = await cartsService.deleteCart(cid)
+    res.redirect(`/cart/${cid}/`)
+  } catch (error) {
+    req.logger.error(`${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()} - Error to empty cart`)
+  }
+}
+
 
 export const getCartDetailPage = async (req, res) => {
   const { cid } = req.params

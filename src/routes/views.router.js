@@ -19,9 +19,11 @@ import {
   deleteUserPage,
   getCheckoutPage,
   getPaymentPage,
-  addProductInCart
+  addProductInCart,
+  deleteProductInCart,
+  deleteCart
 } from "../controllers/views.controller.js";
-import { postProductInCart, deleteCart, deleteProductInCart, increaseQuantityProductInCart, decreaseQuantityProductInCart } from "../controllers/carts.controller.js";
+import { increaseQuantityProductInCart, decreaseQuantityProductInCart } from "../controllers/carts.controller.js";
 
 const viewsRouter = Router();
 viewsRouter.get("/", checkAuth, getIndexPage);
@@ -41,6 +43,8 @@ viewsRouter.get("/:cid/addQuantity/:pid",  applyPolicies(['USER', 'PREMIUM']), i
 viewsRouter.get("/:cid/removeQuantity/:pid",  applyPolicies(['USER', 'PREMIUM']), decreaseQuantityProductInCart);
 
 viewsRouter.get("/:cid/delete/:pid",  applyPolicies(['USER', 'PREMIUM']), deleteProductInCart);
+
+viewsRouter.get("/:cid/delete/",  applyPolicies(['USER', 'PREMIUM']), deleteCart);
 
 viewsRouter.get("/cart/:cid", applyPolicies(['USER', 'PREMIUM']), getCartDetailPage);
 
