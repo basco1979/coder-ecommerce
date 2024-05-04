@@ -4,7 +4,7 @@
   </div>
     <div class="products">
         <h1>Products</h1>
-    <button class="goCart"><a href="/cart/{{cartId}}/"><img src="/img/Shopping-Cart.png" class="cart-icon"></a></button>
+    <a href="/cart/{{cartId}}/"><button class="goCart"><img src="/img/Shopping-Cart.png" class="cart-icon"></button></a>
     {{#if cart_quantity}}
     <span class="cart_quantity">{{cart_quantity}}</span>
     {{/if}}
@@ -15,7 +15,7 @@
         <div class="product-title">{{this.title}}</div>
         <div class="product-description">{{this.description}}</div>
         <div class="product-price">$ {{this.price}}</div>
-        <button class="addToCart"><a href="/{{../cartId}}/add/{{this._id}}"> Add To Cart </a></button>
+        <a href="/{{../cartId}}/add/{{this._id}}"><button class="addToCart"> Add To Cart </button></a>
     </div>
         {{/each}}
 </div>

@@ -96,7 +96,18 @@ export default class CartRepository {
         _id: cart.products[i].product,
       })
       if (cart.products[i].quantity > product.stock) {
+        if(product.stock === 0){
         newCart.push(cart.products[i])
+        }else{
+        const newQuantity = cart.products[i].quantity  - product.stock
+        cart.products[i].quantity  = product.stock
+        product.stock = 0
+        await productModel.findOneAndUpdate({ _id: product.id }, product)
+        let amount = cart.products[i].quantity * product.price
+        ticket.amount += amount
+        cart.products[i].quantity = newQuantity
+        newCart.push(cart.products[i])
+        }
       }
       if (cart.products[i].quantity <= product.stock) {
         product.stock -= cart.products[i].quantity

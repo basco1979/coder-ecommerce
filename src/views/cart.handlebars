@@ -26,11 +26,13 @@
     </span>
   </div>
   <div class="button-container">
-    <button class="checkout"><a href="/cart/{{cart.id}}/checkout">
+    {{#if cart.products}}
+    <a href="/cart/{{cart.id}}/checkout"><button class="checkout">
       Checkout
-    </a></button>
-    <button class="empty-cart"><a href="/{{cart.id}}/delete">
+    </button></a>
+    <a href="/{{cart.id}}/delete"><button class="empty-cart">
       Empty Cart
     </button></a>
-<button class="goBack"><a href='/products'>Back</a></button>
+    {{/if}}
+<a href='/products'><button class="goBack">Keep buying</button></a>
 </div>

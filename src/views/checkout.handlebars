@@ -2,17 +2,17 @@
 <div class="container">
     {{#if ticket.amount }}
     <p>Total Amount to pay : $ {{ticket.amount}}</p>
-    <button class="goPayment"><a href="/cart/{{cart.id}}/payment/{{ticket._id}}">Go To Payment</a></button>
+    <a href="/cart/{{cart.id}}/payment/{{ticket._id}}"><button class="goPayment">Go To Payment</button></a>
     {{else}}
-    <p><strong>No products purchased.</strong></p>
+    <p><strong>No products to purchase.</strong></p>
     {{/if}}
     {{#if cart.products.length }}
     <h3>Unavailable products: </h3>
     <ul>
     {{#each cart.products}}
-        <li>{{this.product.title}}</li>
+        <li>{{this.product.title}} - {{this.quantity}} un.</li>
     {{/each}}
     </ul>
     {{/if}}
-    <button class="goBack"><a href='/products'>Back To Products</a></button>
+    <a href='/products'><button class="goBack">Cancel purchase</button></a>
 </div>
