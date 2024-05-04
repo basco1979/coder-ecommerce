@@ -45,7 +45,7 @@ export const logout = async (req, res) => {
     const user = await usersService.getUserByEmail(req.user.email)
     user.last_connection = new Date(Date.now()).toISOString()
     await usersService.updateUser(user._id, user)
-    res.send({ redirect: 'http://localhost:8080/login' })
+    res.send({ redirect: '/login' })
   } catch (error) {
     req.logger.error(
       `${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()} - Error to logout`
