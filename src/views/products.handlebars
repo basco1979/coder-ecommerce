@@ -1,16 +1,32 @@
-<div>
-     <div>
-    <h2>Welcome {{first_name}} {{last_name}} - Rol: "{{role}}"</h2>
-
-    <br />
-    <button id='logoutBtn' type='button'>Log Out</button>
-
+<div class="container">
+    <h4>User: <span>{{first_name}} {{last_name}}</span> - Rol: <span>{{role}}</span></h4>
+    <button id='logoutBtn' type='button' class="my-button">Log Out</button>
   </div>
-  <script src="js/logout.js"></script>
-    <div  style="text-align: center;">
+    <div class="products">
         <h1>Products</h1>
-    <button><a href="/cart/{{cartId}}/">Go to Cart</a></button>
+    <button class="goCart"><a href="/cart/{{cartId}}/"><img src="/img/Shopping-Cart.png" class="cart-icon"></a></button>
     </div>
+<div class="product-list">
+     {{#each products.docs}}
+<div class="product-card">
+        <div class="product-title">{{this.title}}</div>
+        <div class="product-description">{{this.description}}</div>
+        <div class="product-price">$ {{this.price}}</div>
+        <button class="addToCart"><a href="/{{../cartId}}/add/{{this._id}}"> Add To Cart </a></button>
+    </div>
+        {{/each}}
+</div>
+<div style="text-align: center; margin-top:10px">
+    {{#if products.hasPrevPage}}
+    <button><a href="{{products.prevLink}}"><img src="/img/left-arrow.png" class="arrow"></a></button>
+    {{/if}}
+    {{#if products.hasNextPage}}
+    <button><a href="{{products.nextLink}}"><img src="/img/right-arrow.png" class="arrow"></a></button>
+    {{/if}}
+</div>
+
+{{!--     </div>
+    <div>
     <table>
     <tr>
         <td> Title </td>
@@ -49,4 +65,5 @@
     {{#if products.hasNextPage}}
     <button><a href="{{products.nextLink}}"> Pagina Siguiente</a></button>
     {{/if}}
-</div>
+</div> --}}
+  <script src="js/logout.js"></script>

@@ -4,6 +4,7 @@ import cors from 'cors'
 import session from 'express-session';
 import { Server } from "socket.io";
 import handlebars from "express-handlebars";
+import * as path from 'path'
 import __dirname from "../utils.js";
 import mongoose from "mongoose";
 import { messageModel } from "./dao/models/message.model.js";
@@ -38,7 +39,7 @@ const PORT = process.env.PORT || 8080
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression({
     brotli: {enabled: true, zlib: {}}
 }));

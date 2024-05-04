@@ -1,15 +1,12 @@
 <h1 style='text-align: center;'>Purchase Summary</h1>
 <div class="container">
     <p>Total Amount to pay : $ {{ticket.amount}}</p>
-</div>
-
-<div>
-    <button><a href="/cart/{{cart.id}}/payment/{{ticket._id}}">Go To Payment</a></button>
-</div>
-
-<div>
+    <button class="goPayment"><a href="/cart/{{cart.id}}/payment/{{ticket._id}}">Go To Payment</a></button>
     <h3>Unavailable products: </h3>
+    <ul>
     {{#each cart.products}}
-        <ul>{{this.product.title}} </ul>
+        <li>{{this.product.title}}</li>
     {{/each}}
+    </ul>
+    <button class="goBack"><a href='/products'>Back</a></button>
 </div>

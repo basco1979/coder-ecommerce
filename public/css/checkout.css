@@ -1,0 +1,53 @@
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+ul{
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.goPayment {
+  height: 60px;
+  width: 150px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #fa7d09;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.goPayment:hover {
+  background-color: #b8a641;
+}
+.goPayment:active {
+  background-color: #9b6b04;
+}
+
+.goBack {
+  height: 60px;
+  width: 150px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #8503ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-top: 35px;
+}
+.goBack:hover {
+  background-color: #8e4cf8;
+}
+.goBack:active {
+  background-color: #e5c5f8;
+}

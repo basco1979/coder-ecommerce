@@ -1,16 +1,15 @@
-<div>
-  <h1>Hi!</h1>
-
-  <h2>Welcome {{first_name}} {{last_name}}</h2>
-
-  <button type="button"><a href="/products">Go to Product´s list</a></button>
+<div class="container">
+  <h1>Hi! Welcome {{first_name}} {{last_name}}</h1>
+</div>
+<div class="buttons">
+  <button type="button" class="my-button"><a href="/products">Go to Product´s list</a></button>
   <br />
   <br />
-  {{#if (isAdmin role)}}<button type="button"><a href="/api/session/admin">Go to
+  {{#if (isAdmin role)}}<button type="button" class="my-button"><a href="/api/session/admin">Go to
         Product´s Admin Page</a></button>{{/if}}
   <br />
   <br />
-  <button id="logoutBtn" type="button">Log Out</button>
+  <button id="logoutBtn" type="button" class="logout-button">Log Out</button>
 
 </div>
 <script src="js/logout.js"></script>

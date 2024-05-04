@@ -18,7 +18,8 @@ import {
   updateUserRolPage,
   deleteUserPage,
   getCheckoutPage,
-  getPaymentPage
+  getPaymentPage,
+  addProductInCart
 } from "../controllers/views.controller.js";
 import { postProductInCart, deleteCart, deleteProductInCart, increaseQuantityProductInCart, decreaseQuantityProductInCart } from "../controllers/carts.controller.js";
 
@@ -33,7 +34,7 @@ viewsRouter.get("/chat", applyPolicies(['USER', 'PREMIUM']), getChatPage);
 
 viewsRouter.get("/products", applyPolicies(['ADMIN', 'USER', 'PREMIUM']), getProductsPage);
 
-viewsRouter.get("/:cid/add/:pid",  applyPolicies(['USER', 'PREMIUM']), postProductInCart);
+viewsRouter.get("/:cid/add/:pid",  applyPolicies(['USER', 'PREMIUM']), addProductInCart);
 
 viewsRouter.get("/:cid/addQuantity/:pid",  applyPolicies(['USER', 'PREMIUM']), increaseQuantityProductInCart);
 

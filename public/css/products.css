@@ -1,37 +1,114 @@
-   li.product {
-    background-color: lightskyblue;
-    font-size: 20px;
-    margin-top: 20px;
-    padding: 20px;
-   }
-
-   li {
-       list-style:none;
-   }
-
-   li.navlist {
-       display:inline-block;
-       margin-left:200px;
-   }
-
- 
-#btn{
-    margin-top:20px;
-   margin-left:100px;
+.container {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+.products {
+  margin-top: -55px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-    table {
-        border: 3px solid black;
-        height: 100px;
-        margin: 0px auto;
-        width: 400px;
-        margin-top:100px;
-    }
+a{
+  text-decoration: none;
+  color: white;
+}
+.my-button {
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  padding: 10px 20px;
+  width: 100px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.my-button:hover {
+  background-color: #45a049;
+}
+.my-button:active {
+  background-color: #3e8e41;
+}
 
-    td {
-        padding: 10px;
-        border: 1px solid black;
-    }
+.product-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 200px;
+  height: 100px;
+  margin: 5px;
+}
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.product-description {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.product-price {
+  font-size: 14px;
+  color: #007bff;
+}
 
+.product-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
+.addToCart{
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #0a20e7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.addToCart:hover {
+  background-color: #07b0f3;
+}
+.addToCart:active {
+  background-color: #a46af0;
+}
 
+.goCart{
+  position: absolute;
+  right: 50px;
+  padding: 10px 20px;
+  background-color: #ccfd45;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.goCart:hover {
+  background-color: #b3f858;
+}
+.goCart:active {
+  background-color: #567403;
+}
+
+.cart-icon{
+  height: 50px;
+  width: auto;
+}
+
+.arrow{
+  height: 50px;
+  width: 80px;
+}

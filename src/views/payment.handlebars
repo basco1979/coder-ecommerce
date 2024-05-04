@@ -1,18 +1,8 @@
-<div>
- <div>   
+<div class="container"> 
 <h1>Payment</h1>
-</div>
-<div>
 <p>Welcome, {{user.first_name}} </p>
-</div>
-<div>
-
 <p>You´re gonna to pay $ {{ticket.amount}}</p>
-</div>
-
-<div>
 <p>Please select payment method: </p>
-<img src="/img/mp.svg" width="100px">
 <form action="/api/payments/{{ticket.id}}" method="POST">
 <script 
             src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ stripePublishableKey }}"
@@ -22,8 +12,7 @@
             data-description="Use '4242 4242 4242 4242' for card #"
             data-locale="auto">
           </script>
-          <button type="submit" class="btn btn-outline-dark text-white btn-lg"><img src="/img/stripe.svg" width="100px"></button>
         </form><br>
+    <button class="goBack"><a href='/products'>Back To Products List</a></button>
 
-</div>
 </div>    
