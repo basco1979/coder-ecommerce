@@ -1,0 +1,39 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container {
+  width: 40%;
+}
+
+.register-button {
+  height: 60px;
+  width: 30%;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #f70b0b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.register-button:hover {
+  background-color: #f34c09;
+}
+.register-button:active {
+  background-color: #703701;
+}
+
